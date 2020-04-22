@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import CharacterList from './components/CharacterList.vue'
+
 export default {
   name: 'app',
   data(){
@@ -18,6 +20,10 @@ export default {
     fetch('https://rickandmortyapi.com/api/character/')
     .then(res => res.json())
     .then(characters => this.characters = characters.results)
+  },
+  components: {
+    'character-list': CharacterList,
+    
   }
 }
 </script>
