@@ -1,5 +1,5 @@
 <template lang="html">
-  <li v-on:click="handleClick">{{character.name}}</li>
+  <option v-bind:value="character">{{character.name}}</option>
 </template>
 
 <script>
@@ -7,9 +7,9 @@ import {eventBus} from "../main.js"
 
 
 export default {
-  name: 'list-character',
+  name: 'list-character-select',
   props: ['character'],
-  
+
   methods: {
     handleClick(){
       // console.log('click', this.character);
@@ -17,6 +17,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style lang="css" scoped>
